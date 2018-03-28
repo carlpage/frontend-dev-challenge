@@ -1,0 +1,44 @@
+{
+  "name": "frontend-dev-challenge",
+  "version": "1.0.0",
+  "description": "![https://www.augustash.com](http://augustash.s3.amazonaws.com/logos/ash-inline-color-500.png)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlpage/frontend-dev-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlpage/frontend-dev-challenge/issues"
+  },
+  "homepage": "https://github.com/carlpage/frontend-dev-challenge#readme",
+  "dependencies": {
+    "bourbon": "^5.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "streamqueue": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp-jshint": "^2.1.0",
+    "jshint": "^2.9.5"
+  }
+}

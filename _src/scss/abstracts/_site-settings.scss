@@ -1,0 +1,61 @@
+@charset "UTF-8";
+// ----------------------
+// == Site settings
+// ----------------------
+// Fonts
+$font1: 'Lato',
+serif;
+$font2: 'Roboto',
+sans-serif;
+// = Colors
+// -----------------------------
+// Graphic chart
+$light-blue: #42b1d4;
+$dark-blue: #2b8fb0;
+$dark-grey: #646464;
+$grey: #727272;
+$light-grey: #e7e7e7;
+$border-grey: #dadada;
+
+//= Mixins - Media Query
+//-----------------------------
+$bp-1: rem(450);
+$bp-2: rem(768);
+$bp-3: rem(970);
+$bp-4: rem(1170);
+$screen-sm: 767px;
+$screen-md: 991px;
+//Colors
+$basic: #fff;
+// Triangle Size
+$num-1: 15px;
+$num-2: 48px;
+@mixin min-screen-xs {
+    @media (min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin max-screen-xs {
+    @media (max-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin screen-sm {
+    @media (min-width: $bp-2) {
+        @content;
+    }
+}
+
+@mixin max-screen-md {
+    @media (max-width: $bp-3) {
+        @content;
+    }
+}
+
+@mixin max-screen-lg {
+    @media (max-width: $bp-4) {
+        @content;
+    }
+}

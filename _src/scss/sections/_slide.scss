@@ -1,0 +1,13 @@
+.slick-slider {
+    &__h1 {
+        background-color: white;
+        padding: 3rem;
+        border-top: .5rem solid $light-blue;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        font-size: 3rem;
+        z-index: 1;
+        margin-bottom: -1.5rem;
+        text-align: center;
+    }
+}

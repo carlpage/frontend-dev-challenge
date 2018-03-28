@@ -1,0 +1,203 @@
+nav {
+    @media(max-width: 1000px) {
+        width: 100%;
+        ul {
+            display: none;
+        }
+        li {
+            float: none;
+            a {
+                display: block;
+                line-height: 2rem;
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    background-color: $light-grey;
+    height: 5rem;
+    &__list {
+        list-style: none;
+        @media(max-width: 1000px) {
+            background-color: red;
+        }
+    }
+    &__form {
+        padding: .75rem 0;
+        &--active-sm {
+            width: 30rem;
+            margin: 0 auto;
+            @media(min-width: 1200px) {
+                display: none;
+            }
+        }
+        &--active-lg {
+            float: right;
+            width: 50rem;
+            @media(max-width: 1200px) {
+                display: none;
+            }
+        }
+        input {
+            border: none;
+            height: 3.5rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        button {
+            border: none;
+            height: 3.5rem;
+        }
+    }
+    &__item {
+        display: inline;
+        margin-left: -1px;
+        font-size: 1.25rem;
+        transition: .15s all;
+        border-right: 1px solid $border-grey;
+        padding: 1.7rem 2.5rem;
+        &__dropdown {
+            background-color: white;
+            visibility: hidden;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            transition: opacity .3s ease-in-out;
+            z-index: 1;
+            width: 117rem;
+            border-right: 1px solid $light-grey;
+            border-left: 1px solid $light-grey;
+            border-bottom: 1px solid $light-grey;
+            @media(min-width: 1000px) and (max-width: 1200px) {
+                width: 95rem;
+                height: 50rem;
+            }
+            &__right {
+                background-color: $light-blue;
+                height: 100%;
+                margin-bottom: -9999px;
+                padding-top: 3rem;
+                padding-right: 3rem;
+                padding-left: 3rem;
+                padding-bottom: 3rem;
+                p {
+                    color: white;
+                }
+            }
+            &__col {
+                padding: 3rem 3rem 5.5rem 4rem;
+                p {
+                    font-weight: 600;
+                }
+            }
+            ul {
+                li {
+                    display: block;
+                    padding: .25rem;
+                }
+            }
+            @media(max-width: 1000px) {
+                display: none;
+                visibility: visible;
+                margin-left: 2rem;
+                opacity: 1;
+                position: relative;
+            }
+        }
+        &:first-child {
+            border-left: 1px solid $border-grey;
+        }
+        &:hover {
+            background-color: white;
+            .navigation__item__dropdown {
+                @media(min-width: 1000px) {
+                    visibility: visible;
+                    max-height: 85rem;
+                    opacity: 1;
+                    transition: opacity .3s ease-in-out;
+                }
+            }
+        }
+        @media(max-width: 767px) {
+            display: none !important;
+        }
+    }
+    &__logo {
+        img {
+            height: 8rem;
+        }
+    }
+    &__link,
+    &__link:visited,
+    &__link:focus,
+    &__link:hover {
+        color: black;
+        font-weight: 500;
+        height: 5rem;
+        line-height: 5rem;
+        text-decoration: none;
+        border-bottom: 1px solid $light-blue;
+        @media(max-width: 767px) {
+            border-bottom: none;
+        }
+    }
+    &__mobile {
+        display: none;
+        position: absolute;
+        top: 2.1rem;
+        right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        z-index: 2;
+        @media(max-width: 1000px) {
+            display: block;
+        }
+    }
+    &--toggle {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        span,
+        span:before,
+        span:after {
+            background: black;
+            border-radius: 1px;
+            content: '';
+            cursor: pointer;
+            display: block;
+            height: 5px;
+            position: absolute;
+            transition: all 300ms ease-in-out;
+            width: 35px;
+        }
+        span:before {
+            top: -10px;
+        }
+        span:after {
+            bottom: -10px;
+        }
+        &.active span {
+            background-color: transparent;
+            &:before,
+            &:after {
+                top: 0;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.form-control {
+    box-shadow: none;
+}

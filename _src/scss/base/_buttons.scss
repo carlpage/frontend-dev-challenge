@@ -1,0 +1,26 @@
+.button-primary {
+    background-color: $light-blue;
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: .25rem;
+    font-size: 1.5rem;
+    color: white;
+    display: inline-block;
+    transition: .2s all;
+    &:hover {
+        background-color: $dark-blue;
+    }
+    &--right {
+        float: right;
+    }
+    &--slider {
+        z-index: 2;
+        margin-left: 13rem;
+    }
+    &--sm {
+        padding: .65rem 2.25rem;
+        &:hover {
+            color: white;
+        }
+    }
+}
