@@ -1,4 +1,49 @@
-$(document).ready(() => {
+$(document).ready(function () {
+
+    loadCallouts();
+
+    function loadCallouts() {
+        $.ajax({
+            url: '/data.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (response) {
+                console.log('got some callout data: ', response);
+                for (var i = 0; i < response.callouts.length; i++) {
+                    var title = response.callouts[i].title;
+                    var button = response.callouts[i].buttonLabel;
+                    var image = response.callouts[i].imagePath;
+                    var color = response.callouts[i].color;
+                    if(button === '') {
+                        var $div1 = $('<div class="callout callout--small" style="background-image:url(' + image + ')">');
+                        $div1.append($('<h2 class="callout--small__h2">' + title + '</h2>'));
+                        $('.content-main .container').append($div1);
+                    } else {
+                        var $div2 = $('<div class="callout callout--large" style="background-image:url(' + image + ')">');
+                        // if color is yellow, make top border yellow
+                        if(color === 'yellow') {
+                            $div2.append($(
+                                '<div class="callout--large__inner">' +
+                                '<h2 class="callout--large__h2">' + title + '</h2>' +
+                                '<button class="button-callout">' + button + '</button>' +
+                                '</div>'
+                            ));
+                        }
+                        if (color === 'red') {
+                            // if color is red, make top border red
+                            $div2.append($(
+                                '<div class="callout--large__inner">' +
+                                '<h2 class="callout--large__h2 callout--large__h2--alt">' + title + '</h2>' +
+                                '<button class="button-callout">' + button + '</button>' +
+                                '</div>'
+                            ));
+                        }
+                        $('.content-main .container').append($div2);
+                    } // end conditional
+                } // end for loop
+            } // end success
+        }); //end ajax
+    };
 
     // remove added classes when window is resized to higher than 1000px
     $(window).resize(function () {

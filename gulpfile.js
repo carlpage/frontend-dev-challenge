@@ -99,7 +99,7 @@ gulp.task('build:scripts', function() {
 
 	return streamqueue({ objectMode: true }, gulp.src(jsfiles))
 		.pipe(rename({suffix: '.min'}))
-		.pipe(stripDebug())
+		// .pipe(stripDebug())
 		.pipe(babel({ presets: ['env'] }))
     .pipe(concat('theme.js'))
     .pipe(uglify())

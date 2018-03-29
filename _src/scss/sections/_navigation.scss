@@ -50,9 +50,9 @@
         font-size: 1.25rem;
         transition: .15s all;
         border-right: 1px solid $border-grey;
-        padding: 1.7rem 2.5rem;
+        padding: 1.7rem 2.6rem;
         @media(max-width: 1000px) {
-            border: none;
+            border-right: none;
             padding: 1.25rem;
             float: none;
             display: block;
@@ -217,7 +217,8 @@
 
 .fa-search {
     // I had to use !important to overwrite the font awesome stylesheet. This was a last resort.
-    font-size: 1.8rem !important;
+    font-size: 1.9rem !important;
+    color: $dark-grey;
 }
 
 .fa-caret-down {

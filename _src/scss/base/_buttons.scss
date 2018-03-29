@@ -1,4 +1,5 @@
 .button-primary {
+    // background-image: linear-gradient(to right top, $light-blue, #3ca8cb, #359fc1, #2e97b8, $dark-blue);
     background-color: $light-blue;
     border: none;
     padding: .5rem 2rem;
@@ -7,8 +8,9 @@
     color: white;
     display: inline-block;
     font-weight: 300;
-    transition: .2s all;
+    transition: .2s ease-out;
     &:hover {
+        // background-image: none;
         background-color: $dark-blue;
     }
     &--right {
@@ -26,7 +28,17 @@
     }
 }
 
-// .input-group-btn:before {
-//     content: '';
-    // border: 1px solid black;
-// }
+.button-callout {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 3px solid $light-blue;
+    padding: .5rem 2.25rem;
+    border-radius: .25rem;
+    font-size: 1.5rem;
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    transition: .2s ease-out;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
