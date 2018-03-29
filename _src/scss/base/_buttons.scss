@@ -6,6 +6,7 @@
     font-size: 1.5rem;
     color: white;
     display: inline-block;
+    font-weight: 300;
     transition: .2s all;
     &:hover {
         background-color: $dark-blue;
@@ -24,3 +25,8 @@
         }
     }
 }
+
+// .input-group-btn:before {
+//     content: '';
+    // border: 1px solid black;
+// }

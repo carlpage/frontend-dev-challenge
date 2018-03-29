@@ -1,20 +1,3 @@
-nav {
-    @media(max-width: 1000px) {
-        width: 100%;
-        ul {
-            display: none;
-        }
-        li {
-            float: none;
-            a {
-                display: block;
-                line-height: 2rem;
-                padding: 1.5rem;
-            }
-        }
-    }
-}
-
 .navigation {
     position: relative;
     width: 100%;
@@ -23,7 +6,14 @@ nav {
     &__list {
         list-style: none;
         @media(max-width: 1000px) {
-            background-color: red;
+            background-color: $light-grey;
+            padding: 5rem 3rem 1rem 3rem;
+            border-bottom-left-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            display: none;
+            z-index: 1;
+            position: absolute;
+            width: 100%;
         }
     }
     &__form {
@@ -37,7 +27,7 @@ nav {
         }
         &--active-lg {
             float: right;
-            width: 50rem;
+            width: 55rem;
             @media(max-width: 1200px) {
                 display: none;
             }
@@ -61,6 +51,12 @@ nav {
         transition: .15s all;
         border-right: 1px solid $border-grey;
         padding: 1.7rem 2.5rem;
+        @media(max-width: 1000px) {
+            border: none;
+            padding: 1.25rem;
+            float: none;
+            display: block;
+        }
         &__dropdown {
             background-color: white;
             visibility: hidden;
@@ -78,6 +74,10 @@ nav {
                 width: 95rem;
                 height: 50rem;
             }
+            @media(max-width: 1000px) {
+                width: 100%;
+                border: none;
+            }
             &__right {
                 background-color: $light-blue;
                 height: 100%;
@@ -89,11 +89,20 @@ nav {
                 p {
                     color: white;
                 }
+                @media(max-width: 1000px) {
+                    display: none;
+                }
             }
             &__col {
                 padding: 3rem 3rem 5.5rem 4rem;
                 p {
                     font-weight: 600;
+                }
+                @media(max-width: 1000px) {
+                    padding: 1rem;
+                    ul {
+                        display: none;
+                    }
                 }
             }
             ul {
@@ -112,6 +121,9 @@ nav {
         }
         &:first-child {
             border-left: 1px solid $border-grey;
+            @media(max-width: 1000px) {
+                border: none;
+            }
         }
         &:hover {
             background-color: white;
@@ -123,9 +135,6 @@ nav {
                     transition: opacity .3s ease-in-out;
                 }
             }
-        }
-        @media(max-width: 767px) {
-            display: none !important;
         }
     }
     &__logo {
@@ -139,12 +148,16 @@ nav {
     &__link:hover {
         color: black;
         font-weight: 500;
+        font-size: 1.35rem;
         height: 5rem;
         line-height: 5rem;
         text-decoration: none;
         border-bottom: 1px solid $light-blue;
-        @media(max-width: 767px) {
+        @media(max-width: 1000px) {
             border-bottom: none;
+            line-height: 1;
+            height: 1rem;
+            font-size: 1.6rem;
         }
     }
     &__mobile {
@@ -200,4 +213,16 @@ nav {
 
 .form-control {
     box-shadow: none;
+}
+
+.fa-search {
+    // I had to use !important to overwrite the font awesome stylesheet. This was a last resort.
+    font-size: 1.8rem !important;
+}
+
+.fa-caret-down {
+    @media(min-width: 1000px) {
+        // I had to use !important to overwrite the font awesome stylesheet. This was a last resort.
+        display: none !important;
+    }
 }
