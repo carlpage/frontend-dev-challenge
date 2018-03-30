@@ -3,13 +3,11 @@
 // == Site settings
 // ----------------------
 // Fonts
-$font1: 'Lato',
-serif;
-$font2: 'Roboto',
-sans-serif;
+$font1: 'Lato', serif;
+$font2: 'Roboto', sans-serif;
+
 // = Colors
 // -----------------------------
-// Graphic chart
 $light-blue: #42b1d4;
 $dark-blue: #2b8fb0;
 $dark-grey: #646464;
@@ -30,11 +28,7 @@ $bp-3: rem(970);
 $bp-4: rem(1170);
 $screen-sm: 767px;
 $screen-md: 991px;
-//Colors
-$basic: #fff;
-// Triangle Size
-$num-1: 15px;
-$num-2: 48px;
+
 @mixin min-screen-xs {
     @media (min-width: $screen-sm) {
         @content;

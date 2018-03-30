@@ -62,7 +62,6 @@ $(document).ready(function () {
         e.preventDefault();
         var windowWidth = $(window).width();
         if (windowWidth < 1000) {
-            // $('.navigation__item__dropdown').css("visibility", "visible");
             $('.navigation__item__dropdown').slideToggle();
         }
     });
@@ -91,8 +90,8 @@ $(document).ready(function () {
         $(slick.$slides.get(currentSlide)).addClass('is-animating');
     });
 
+    // changes selcted option in dropdown
     $('.search-panel .dropdown-menu').find('a').click(function (e) {
-        console.log('hello');
         e.preventDefault();
         var param = $(this).attr("href").replace("#", "");
         var concept = $(this).text();
