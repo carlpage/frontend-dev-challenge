@@ -31,8 +31,7 @@ gulp.task('browser-sync', function() {
 	let files = [
 	'./style.css',
 	'./js/*.js',
-	'./**/*.html',
-	'./**/*.twig'
+	'./**/*.html'
 	];
 
 	//initialize browsersync

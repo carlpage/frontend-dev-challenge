@@ -57,8 +57,8 @@ $(document).ready(function () {
         }
     });
 
-    // if window width is less than 1000px, second level nav
-    $('.navigation__list .navigation__item:first-child').click(function (e) {
+    // if window width is less than 1000px, open second level nav
+    $('.navigation__list .navigation__item:first-child .navigation__link').click(function (e) {
         e.preventDefault();
         var windowWidth = $(window).width();
         if (windowWidth < 1000) {
