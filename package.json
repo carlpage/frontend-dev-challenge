@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/carlpage/frontend-dev-challenge#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "bourbon": "^5.0.0",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",

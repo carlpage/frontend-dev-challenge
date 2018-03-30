@@ -17,18 +17,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-
-/* 
-.photo:after {
-    content: "";
-    background: rgba(0, 0, 0, .3);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-} */
-
 .slick-list {
     position: relative;
     display: block;
@@ -81,9 +69,15 @@
 .slick-slide {
     display: none;
     float: left;
-    height: 70vh;
+    height: 55vh;
     min-height: 1px;
     width: 100vw;
+}
+
+@media(max-width:1000px) {
+    .slick-slide {
+        height: 70vh;
+    }
 }
 
 [dir='rtl'] .slick-slide {

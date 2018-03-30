@@ -1,44 +1,50 @@
-.button-primary {
-    // background-image: linear-gradient(to right top, $light-blue, #3ca8cb, #359fc1, #2e97b8, $dark-blue);
-    background-color: $light-blue;
-    border: none;
-    padding: .5rem 2rem;
-    border-radius: .25rem;
-    font-size: 1.5rem;
-    color: white;
-    display: inline-block;
-    font-weight: 300;
-    transition: .2s ease-out;
-    &:hover {
-        // background-image: none;
-        background-color: $dark-blue;
-    }
-    &--right {
-        float: right;
-    }
-    &--slider {
-        z-index: 2;
-        margin-left: 13rem;
-    }
-    &--sm {
-        padding: .65rem 2.25rem;
+.button {
+    &-primary {
+        // background-image: linear-gradient(to right top, $light-blue, #3ca8cb, #359fc1, #2e97b8, $dark-blue);
+        background-color: $light-blue;
+        border: none;
+        padding: .5rem 2rem;
+        border-radius: .25rem;
+        font-size: 1.5rem;
+        color: white;
+        display: inline-block;
+        font-weight: 300;
+        transition: .2s ease-out;
         &:hover {
-            color: white;
+            // background-image: none;
+            background-color: $dark-blue;
+        }
+        &--right {
+            float: right;
+            padding: .5rem 3rem;
+            @media(max-width: 1000px) {
+                padding: .5rem 2rem;
+            }
+        }
+        &--slider {
+            z-index: 2;
+            margin-left: 13rem;
+            box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .35);
+        }
+        &--sm {
+            padding: .65rem 2.25rem;
+            &:hover {
+                color: white;
+            }
         }
     }
-}
-
-.button-callout {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 3px solid $light-blue;
-    padding: .5rem 2.25rem;
-    border-radius: .25rem;
-    font-size: 1.5rem;
-    color: white;
-    display: inline-block;
-    font-weight: 700;
-    transition: .2s ease-out;
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+    &-callout {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 3px solid $light-blue;
+        padding: .5rem 2.25rem;
+        border-radius: .25rem;
+        font-size: 1.5rem;
+        color: white;
+        display: inline-block;
+        font-weight: 700;
+        transition: .2s ease-out;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     }
 }

@@ -14,10 +14,12 @@ $(document).ready(function () {
                     var button = response.callouts[i].buttonLabel;
                     var image = response.callouts[i].imagePath;
                     var color = response.callouts[i].color;
+                    // if there is no button, append small callout box
                     if(button === '') {
                         var $div1 = $('<div class="callout callout--small" style="background-image:url(' + image + ')">');
                         $div1.append($('<h2 class="callout--small__h2">' + title + '</h2>'));
                         $('.content-main .container').append($div1);
+                        // if there is a button, append large callout box
                     } else {
                         var $div2 = $('<div class="callout callout--large" style="background-image:url(' + image + ')">');
                         // if color is yellow, make top border yellow
@@ -56,7 +58,7 @@ $(document).ready(function () {
     });
 
     // if window width is less than 1000px, second level nav
-    $('.navigation__list .navigation__item').click(function (e) {
+    $('.navigation__list .navigation__item:first-child').click(function (e) {
         e.preventDefault();
         var windowWidth = $(window).width();
         if (windowWidth < 1000) {
@@ -71,6 +73,7 @@ $(document).ready(function () {
         $(".navigation__list").slideToggle();
     });
 
+    // slick slide initiation
     $('.js-slick').slick({
         autoplay: true,
         autoplaySpeed: 100000,
@@ -89,6 +92,7 @@ $(document).ready(function () {
     });
 
     $('.search-panel .dropdown-menu').find('a').click(function (e) {
+        console.log('hello');
         e.preventDefault();
         var param = $(this).attr("href").replace("#", "");
         var concept = $(this).text();
