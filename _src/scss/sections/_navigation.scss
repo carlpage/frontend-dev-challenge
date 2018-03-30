@@ -72,8 +72,7 @@
             @media(min-width: 1000px) and (max-width: 1200px) {
                 width: 95rem;
                 height: 50rem;
-            } 
-            // @media(max-width: 1000px) {
+            } // @media(max-width: 1000px) {
             //     width: 100%;
             //     border: none;
             // }
@@ -222,6 +221,15 @@
 
 .form-control {
     box-shadow: none;
+}
+
+.dropdown-toggle {
+    padding-right: .25rem;
+    &:after {
+        content: "";
+        padding-left: .75rem; 
+        border-right: 1px solid $form-grey;
+    }
 }
 
 .fa-search {
